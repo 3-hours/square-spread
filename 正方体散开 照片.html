@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<style type="text/css">
+		@font-face {
+  					font-family: 'Monoton';
+  					font-style: normal;
+  					font-weight: 400;
+  					src: local('Monoton'), local('Monoton-Regular'),
+  					url(http://themes.googleusercontent.com/static/fonts/monoton/v4/AKI-lyzyNHXByGHeOcds_w.woff) format('woff');
+					}
+		@font-face {
+  					font-family: 'Vampiro One';
+  					font-style: normal;
+  					font-weight: 400;
+  					src: local('Vampiro One'), local('VampiroOne-Regular'),
+  					 url(http://themes.googleusercontent.com/static/fonts/vampiroone/v3/Ho2Xld8UbQyBA8XLxF1_NYbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+					}
+		body{
+			background-color: black;
+			position:relative;
+		}
+	 	.wrap, .inner{
+	 		width: 300px;
+	 		height: 300px;
+	 		position: relative;
+	 		margin:10% 30% 0 50%;
+	 		
+	 		transform-style: preserve-3d;
+	 		transition: all linear 10s;
+	 	}
+	 	.wrap .inner{
+	 		position: absolute;
+	 		left: 50px;
+	 		top:50px;
+	 		width: 200px;
+	 		height: 200px;
+	 		margin:0;
+	 		border:0;
+	 		transform-origin: 100px 100px 100px;
+	 	}
+	 	.wrap>div, .inner>div{
+	 		width: 300px;
+	 		height: 300px;
+	 		background: rgba(200,100,100,0.5);
+	 		border:1px solid gray;
+	 		position: absolute;
+	 		left: 0;
+	 		top:0;
+	 	}
+	 	.text1{
+	 		position:absolute;
+	 		left:8%;
+	 		top:-10%;
+	 		color:#BA01FF;
+  			font-family:Vampiro One;
+	 		font-size: 5rem;
+	 		text-decoration: none;
+	 	}
+	 	.text1:hover{
+	 		-webkit-animation: move1 1.5s ease-in-out infinite alternate;
+	 		-moz-animation: move1 1.5s ease-in-out infinite alternate;
+	 		animation: move1 1.5s ease-in-out infinite alternate;
+	 	}
+	 	.text2{
+	 		position:absolute;
+	 		left:5%;
+	 		top:6%;
+	 		font-size: 15rem;
+	 		color:#BA01FF;
+  			font-family:Monoton;
+	 		text-decoration: none;
+	 		-webkit-animation:move1 1.5s ease-in-out infinite alternate;
+	 		-moz-animation: move1 1.5s ease-in-out infinite alternate;
+	 		animation: move1 1.5s ease-in-out infinite alternate;
+	 	} 
+	 	.wrap>div img{
+	 		width:300px;
+	 		height: auto;
+	 		opacity: .5;
+	 	}
+	 	.wrap .inner>div{
+	 		font-size: 70px;
+	 		color:orange;
+	 		width: 200px;
+	 		height: 200px;
+	 		line-height: 200px;
+	 		opacity: 1;
+	 		background: rgba(100,100,200,0.7);
+	 	}
+	 	.wrap>div:nth-child(1){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateX(90deg) translateZ(150px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap>div:nth-child(2){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateX(-90deg) translateZ(150px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap>div:nth-child(3){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateY(90deg) translateZ(150px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap>div:nth-child(4){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateY(-90deg) translateZ(150px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap>div:nth-child(5){
+	 		transform: translateZ(150px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap>div:nth-child(6){
+	 		transform: translateZ(-150px);
+	 		transition: all linear 2s;
+	 	}
+
+	 	.wrap .inner>div:nth-child(1){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateX(90deg) translateZ(100px);
+	 		transition: all linear 1s;
+	 	}
+	 	.wrap .inner>div:nth-child(2){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateX(-90deg) translateZ(100px);
+	 		transition: all linear 2s;
+	 	}
+	 	.wrap .inner>div:nth-child(3){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateY(90deg) translateZ(100px);
+	 		transition: all linear 3s;
+	 	}
+	 	.wrap .inner>div:nth-child(4){
+	 		transform-origin: 50% 50%;
+	 		transform: rotateY(-90deg) translateZ(100px);
+	 		transition: all linear 4s;
+	 	}
+	 	.wrap .inner>div:nth-child(5){
+	 		transform: translateZ(100px);
+	 		transition: all linear 5s;
+	 	}
+	 	.wrap .inner>div:nth-child(6){
+	 		transform: translateZ(-100px);
+	 		transition: all linear 5s;
+	 	}
+
+
+	 	.wrap:hover{
+	 		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	 	}
+	 	.wrap:hover>div:nth-child(1){
+	 		transform: rotateX(90deg) translateZ(300px);
+	 	}
+	 	.wrap:hover>div:nth-child(2){
+	 		transform: rotateX(-90deg) translateZ(300px);
+	 	}
+	 	.wrap:hover>div:nth-child(3){
+	 		transform: rotateY(90deg) translateZ(300px);
+	 	}
+	 	.wrap:hover>div:nth-child(4){
+	 		transform: rotateY(-90deg) translateZ(300px);
+	 	}
+	 	.wrap:hover>div:nth-child(5){
+	 		transform: translateZ(300px);
+	 	}
+	 	.wrap:hover>div:nth-child(6){
+	 		transform: translateZ(-300px);
+	 	}
+	 	@-webkit-keyframes move1 {
+  				from {
+    					text-shadow:
+    					0 0 10px #fff,
+               			0 0 20px #fff,
+               			0 0 30px #fff,
+               			0 0 40px #ff00de,
+               			0 0 70px #ff00de,
+               			0 0 80px #ff00de,
+               			0 0 100px #ff00de,
+               			0 0 150px #ff00de;
+  					}
+  				to {
+   		 				text-shadow:
+   		 				0 0 5px #fff,
+               			0 0 10px #fff,
+               			0 0 15px #fff,
+               			0 0 20px #ff00de,
+               			0 0 35px #ff00de,
+               			0 0 40px #ff00de,
+               			0 0 50px #ff00de,
+               			0 0 75px #ff00de;
+  					}
+			}
+			@-moz-keyframes move1 {
+  				from {
+    					text-shadow:
+    					0 0 10px #fff,
+               			0 0 20px #fff,
+               			0 0 30px #fff,
+               			0 0 40px #ff00de,
+               			0 0 70px #ff00de,
+               			0 0 80px #ff00de,
+               			0 0 100px #ff00de,
+               			0 0 150px #ff00de;
+  					}
+  				to {
+   		 				text-shadow: 
+   		 				0 0 5px #fff,
+               			0 0 10px #fff,
+               			0 0 15px #fff,
+               			0 0 20px #ff00de,
+               			0 0 35px #ff00de,
+               			0 0 40px #ff00de,
+               			0 0 50px #ff00de,
+               			0 0 75px #ff00de;
+  					}
+			}
+	</style>
+</head>
+<body>
+	<a class="text1" href="https://github.com/haocunying">contact</a>
+ 	<a class="text2" href="https://github.com/haocunying">ME</a>
+ 	<div class="wrap">
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div><img src="personal.jpg.jpg"/></div>
+ 		 <div class="inner">
+ 			<div></div>
+ 			<div></div>
+ 			<div></div>
+ 			<div></div>
+ 			<div></div>
+ 			<div></div>
+ 		</div>	 
+ 	</div>
+</body>
+</html>
+
+
+
